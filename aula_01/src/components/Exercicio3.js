@@ -1,11 +1,11 @@
-import { View, Text, TextInput} from 'react-native'
+import { View, Text, TextInput, StyleSheet} from 'react-native'
 import React from 'react'
 import { useState } from 'react'
 
 const Exercicio3 = () => {
     const [texto, setTexto] = useState("")
   return (
-    <View>
+    <View style={styles.container}>
         <TextInput
             value = {texto}
             onChangeText = {setTexto}
@@ -15,5 +15,13 @@ const Exercicio3 = () => {
     </View>
   )
 }
+
+const styles = StyleSheet.create({
+    container:{
+        alignItems: 'center',
+        justifyContent: 'center',
+        
+    }
+})
 
 export default Exercicio3
