@@ -4,11 +4,12 @@ import Exercicio1 from './src/components/Exercicio1'
 import Exercicio2 from './src/components/Exercicio2'
 import Exercicio3 from './src/components/Exercicio3'
 import Exercicio4 from './src/components/Exercicio4'
+import TodoList from './src/components/TodoList'
 
 const App = () => {
   return (  
     <View style={styles.container}>
-      <Exercicio4/>
+      <TodoList/>
     </View>
   )
 }
@@ -16,8 +17,6 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
   },
 })
 
