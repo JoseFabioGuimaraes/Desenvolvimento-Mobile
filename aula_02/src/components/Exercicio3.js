@@ -25,3 +25,5 @@ const styles = StyleSheet.create({
 });
 
 export default Exercicio3;
+
+//Testar se todas as cores estão funcionando 
