@@ -22,4 +22,13 @@ Este repositório reúne todos os exercícios e projetos desenvolvidos na discip
 </a>
 
 ## Aula 02 Exercícios:
+<a href="https://github.com/JoseFabioGuimaraes/Desenvolvimento-Mobile/blob/master/aula_02/src/components/Exercicio1.js">
+  <img src="https://i.ibb.co/jgwpNWT/exercicio1-Aula02.jpg" alt="Imagem do exercício 1" style="width:200px;"/>
+<a href="https://github.com/JoseFabioGuimaraes/Desenvolvimento-Mobile/blob/master/aula_02/src/components/Exercicio2.js">
+  <img src="https://i.ibb.co/28V7TNC/exercicio2-aula02.jpg" alt="Imagem do exercício 2" style="width:200px;"/>
+<a href="https://github.com/JoseFabioGuimaraes/Desenvolvimento-Mobile/blob/master/aula_02/src/components/Exercicio3.js">
+  <img src="https://i.ibb.co/4ZLqnRJ/exercicio3-aula02.jpg" alt="Imagem do exercício 3" style="width:200px;"/>
+<a href="https://github.com/JoseFabioGuimaraes/Desenvolvimento-Mobile/blob/master/aula_02/src/components/Exercicio4.js">
+  <img src="https://i.ibb.co/qgqzzsx/exercicio4-aula02.jpg" alt="Imagem do exercício 4" style="width:200px;"/>
 
+## Aula 03 Exercícios:

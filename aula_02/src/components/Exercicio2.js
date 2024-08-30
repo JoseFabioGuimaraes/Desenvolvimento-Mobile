@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     box:{
         width:50,
         height:50,
-        backgroundColor:'pink'
+        backgroundColor:'black'
     }
 })
 export default Exercicio2
