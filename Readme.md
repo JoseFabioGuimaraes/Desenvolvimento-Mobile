@@ -31,6 +31,6 @@ Este repositório reúne todos os exercícios e projetos desenvolvidos na discip
 <a href="https://github.com/JoseFabioGuimaraes/Desenvolvimento-Mobile/blob/master/aula_02/src/components/Exercicio4.js">
   <img src="https://i.ibb.co/qgqzzsx/exercicio4-aula02.jpg" alt="Imagem do exercício 4" style="width:200px;"/>
 <a href="https://github.com/JoseFabioGuimaraes/Desenvolvimento-Mobile/blob/master/aula_02/src/components/TodoList.js">
-  <img src="https://i.ibb.co/LvRJWVg/Lista-Todo-Desafio.jpg" alt="Imagem do desafio Lista To-D0" style="width:200px;"/>
+  <img src="https://i.postimg.cc/fRDRN74n/Screenshot-20240902-223050-Expo-Go.jpg" alt="Imagem do desafio Lista To-D0" style="width:200px;"/>
 
 ## Aula 03 Exercícios:
