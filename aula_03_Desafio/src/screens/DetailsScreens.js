@@ -1,19 +1,21 @@
-import { View, Text, StyleSheet, Image} from 'react-native'
+
+import { View, Text, Image, StyleSheet } from 'react-native'
 import React from 'react'
 
-const DetailsScreens = ({route}) => {
+const DetailsScreen = ({ route }) => {
 
-    const {user} = route.params
+    const { user } = route.params
 
-    const profileImage = user.gender === 'male' ? require('../../assets/profile_man.png') 
+    const profileImage = user.gender === 'male'
+    ? require('../../assets/profile_man.png')
     : require('../../assets/profile_woman.png')
 
   return (
     <View style={styles.container}>
-        <Image source={profileImage} style={styles.profileImage} />
-        <Text style={styles.name}>Name: {user.name}</Text>
-        <Text style={styles.detail}>Age: {user.age}</Text>
-    </View> 
+      <Image source={profileImage} style={styles.profileImage} />
+      <Text style={styles.name}>Name: {user.name}</Text>
+      <Text style={styles.detail}>Age: {user.age}</Text>
+    </View>
   )
 }
 
@@ -39,4 +41,4 @@ const styles = StyleSheet.create({
     }
   });
 
-export default DetailsScreens
+export default DetailsScreen
