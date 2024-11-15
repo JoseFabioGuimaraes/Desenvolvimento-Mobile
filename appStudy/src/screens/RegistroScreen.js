@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, Alert, StyleSheet, Image } from 'react-native';
-import { signInWithEmailAndPassword } from 'firebase/auth';
+import { View, Text, TextInput, TouchableOpacity, Alert, StyleSheet } from 'react-native';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../config/firebaseConfig';
 
-const LoginScreen = ({ navigation }) => {
+const RegistroScreen = ({ navigation }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const handleLogin = async () => {
+    const handleRegister = async () => {
         try {
-            await signInWithEmailAndPassword(auth, email, password);
-            Alert.alert('Sucesso', 'Login realizado com sucesso!');
+            await createUserWithEmailAndPassword(auth, email, password);
+            Alert.alert('Sucesso', 'Conta criada com sucesso!');
+            navigation.goBack(); // Retorna à tela de login após o registro
         } catch (error) {
             Alert.alert('Erro', error.message);
         }
@@ -18,10 +19,8 @@ const LoginScreen = ({ navigation }) => {
 
     return (
         <View style={styles.container}>
-            <Image source={require('../../assets/logo.png')} style={styles.logo} />
-            <Text style={styles.title}>Bem-vindo</Text>
-            <Text style={styles.subtitle}>Faça login para continuar</Text>
-            
+            <Text style={styles.title}>Criar Conta</Text>
+
             <TextInput
                 placeholder="Email"
                 value={email}
@@ -39,12 +38,8 @@ const LoginScreen = ({ navigation }) => {
                 autoCapitalize="none"
             />
 
-            <TouchableOpacity style={styles.button} onPress={handleLogin}>
-                <Text style={styles.buttonText}>Entrar</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity onPress={() => navigation.navigate('Registro')}>
-                <Text style={styles.registerText}>Criar Conta</Text>
+            <TouchableOpacity style={styles.button} onPress={handleRegister}>
+                <Text style={styles.buttonText}>Registrar</Text>
             </TouchableOpacity>
         </View>
     );
@@ -57,24 +52,12 @@ const styles = StyleSheet.create({
         padding: 20,
         backgroundColor: '#ffffff',
     },
-    logo: {
-        width: 150,
-        height: 150,
-        alignSelf: 'center',
-        marginBottom: 20,
-    },
     title: {
         fontSize: 28,
         fontWeight: 'bold',
         textAlign: 'center',
-        marginBottom: 10,
-        color: '#343a40',
-    },
-    subtitle: {
-        fontSize: 16,
-        textAlign: 'center',
         marginBottom: 20,
-        color: '#6c757d',
+        color: '#343a40',
     },
     input: {
         height: 50,
@@ -96,12 +79,6 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontWeight: '600',
     },
-    registerText: {
-        fontSize: 16,
-        color: '#007bff',
-        textAlign: 'center',
-        marginTop: 15,
-    },
 });
 
-export default LoginScreen;
+export default RegistroScreen;
