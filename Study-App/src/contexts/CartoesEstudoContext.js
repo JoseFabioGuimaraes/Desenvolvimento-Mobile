@@ -29,6 +29,7 @@ export const ProvedorCartoesEstudo = ({ children }) => {
     const adicionarCartao = async (cartao) => {
         try {
             const novoCartao = { ...cartao, uid: user.uid }; 
+            
             const docRef = await addDoc(collection(db, 'cartoes'), novoCartao);
             setCartoes([...cartoes, { id: docRef.id, ...novoCartao }]);
             console.log('Cartão adicionado ao Firestore:', novoCartao);
