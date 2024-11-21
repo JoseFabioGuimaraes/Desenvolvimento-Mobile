@@ -11,7 +11,7 @@ const RegistroScreen = ({ navigation }) => {
         try {
             await createUserWithEmailAndPassword(auth, email, password);
             Alert.alert('Sucesso', 'Conta criada com sucesso!');
-            navigation.goBack(); // Retorna à tela de login após o registro
+            navigation.goBack(); 
         } catch (error) {
             Alert.alert('Erro', error.message);
         }

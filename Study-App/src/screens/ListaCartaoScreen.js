@@ -42,7 +42,6 @@ const ListaCartaoScreen = ({ navigation }) => {
 
     const cartoesAgrupadosPorStatus = (status) => cartoes.filter(cartao => cartao.status === status);
 
-    // Filtra os cartões próximos ao vencimento (15 dias)
     const cartoesVencimentoProximo = cartoes.filter(cartao => {
         const dataTermino = new Date(cartao.dataTermino);
         const diferencaDias = (dataTermino - new Date()) / (1000 * 60 * 60 * 24);
@@ -51,7 +50,6 @@ const ListaCartaoScreen = ({ navigation }) => {
 
     return (
         <View style={styles.container}>
-            {/* Botão para ver tarefas próximas ao vencimento */}
             <TouchableOpacity style={styles.dueSoonButton} onPress={() => navigation.navigate('TarefasVencimentoProximo')}>
                 <Text style={styles.dueSoonButtonText}>Tarefas a Vencer: {cartoesVencimentoProximo.length}</Text>
             </TouchableOpacity>

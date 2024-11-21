@@ -7,7 +7,7 @@ const CartoesEstudoContext = createContext();
 
 export const ProvedorCartoesEstudo = ({ children }) => {
     const [cartoes, setCartoes] = useState([]);
-    const { user } = useContext(AuthContext); // Pega o usuário autenticado
+    const { user } = useContext(AuthContext);
 
     useEffect(() => {
         if (user) {
@@ -17,7 +17,7 @@ export const ProvedorCartoesEstudo = ({ children }) => {
 
     const carregarCartoes = async () => {
         try {
-            const q = query(collection(db, 'cartoes'), where('uid', '==', user.uid)); // Filtra cards pelo UID do usuário
+            const q = query(collection(db, 'cartoes'), where('uid', '==', user.uid)); 
             const cartoesSnapshot = await getDocs(q);
             const cartoesList = cartoesSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
             setCartoes(cartoesList);
@@ -28,7 +28,7 @@ export const ProvedorCartoesEstudo = ({ children }) => {
 
     const adicionarCartao = async (cartao) => {
         try {
-            const novoCartao = { ...cartao, uid: user.uid }; // Adiciona o UID do usuário ao novo card
+            const novoCartao = { ...cartao, uid: user.uid }; 
             const docRef = await addDoc(collection(db, 'cartoes'), novoCartao);
             setCartoes([...cartoes, { id: docRef.id, ...novoCartao }]);
             console.log('Cartão adicionado ao Firestore:', novoCartao);
